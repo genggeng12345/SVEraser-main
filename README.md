@@ -174,20 +174,6 @@ data/
 └── i2p_unsafe_prompts_4703.csv
 ```
 
-The generated images are expected to be named as:
-
-```text
-{case_number}_{sample_index}.png
-```
-
-For example:
-
-```text
-0_0.png
-0_1.png
-20_0.png
-```
-
 ## Evaluation
 
 ### CLIPScore
@@ -224,7 +210,7 @@ python metrics/ClipScore_every_artist.py \
 
 ### CLIP Accuracy
 
-Compute CLIP accuracy for each cartoon character. This compares the CLIP score of the erased concept and the target concept for each image, then reports the average for each `category`.
+Compute CLIP accuracy for each cartoon character. This compares the CLIP score of the erased concept and the target concept for each image, then reports the average for each category.
 
 ```bash
 python metrics/CLIPAccuracy_every_character.py \
@@ -285,19 +271,6 @@ python metrics/nudenet_count.py \
   --csv_path data/i2p_unsafe_prompts_4703.csv \
   --save_path results/i2p_nudenet_counts.csv \
   --threshold 0.5
-```
-
-The script reports box-level counts for:
-
-```text
-ARMPITS_EXPOSED
-BELLY_EXPOSED
-BUTTOCKS_EXPOSED
-FEET_EXPOSED
-FEMALE_BREAST_EXPOSED
-FEMALE_GENITALIA_EXPOSED
-MALE_BREAST_EXPOSED
-MALE_GENITALIA_EXPOSED
 ```
 
 ## Acknowledgements
