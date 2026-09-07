@@ -1,0 +1,27 @@
+name: SVEraser
+channels:
+  - conda-forge
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - torch==2.5.1
+      - torchvision==0.20.1
+      - diffusers==0.14.0
+      - transformers==4.26.0
+      - accelerate==0.28.0
+      - safetensors==0.4.2
+      - pandas==2.2.1
+      - pillow==9.4.0
+      - matplotlib==3.8.4
+      - tqdm==4.66.2
+      - numpy==1.26.4
+      - einops==0.7.0
+      - huggingface_hub==0.25.2
+      - scipy==1.11.1
+      - protobuf==4.25.3
+      - scikit-learn==1.4.2
+      - clean-fid==0.1.35
+      - nudenet==3.0.8
+      - opencv-python-headless==4.9.0.80
+      - ftfy==6.2.0
