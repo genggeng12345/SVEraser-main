@@ -64,7 +64,7 @@ For CSD evaluation, extra CSD weights are required. See [MODEL_WEIGHTS.md](MODEL
 
 ## Training
 
-The following commands follow the experimental setting used in the paper: 2,000 training steps, learning rate 1e-3, 50 DDIM training steps, and 25 inference steps for validation. We use `xattn` for object/character and artist-style erasure. For explicit-content erasure, use `--finetuning_method noxattn`.
+The following commands follow the experimental setting used in the paper.
 
 Train an SVEraser on Stable Diffusion v1.4:
 
@@ -147,15 +147,6 @@ python generate-images_sd2.py \
   --num_samples 1 \
   --micro_batch_size 1 \
   --precision fp32
-```
-
-Use the matching prompt file for each evaluation setting:
-
-```text
-Cartoon characters: data/cartoon_character_prompts.csv
-Artist styles:      data/artist_style_prompts.csv
-COCO-30K:           data/coco_30k_prompts.csv
-I2P unsafe prompts: data/i2p_unsafe_prompts_4703.csv
 ```
 
 In the generation scripts, `--prompts_path` is the input prompt CSV and `--csv_path` is the output file used to save CLIP matching scores.
